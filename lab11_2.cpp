@@ -9,10 +9,11 @@ int main (){
 	source.open("cheerbook.txt") ;
 	dest.open("cheerbook_copy.txt");
 	
-	//กรอก Code เฉพาะส่วนนี้ ให้สอดคล้องกับโจทย์และ Code ส่วนอื่น ๆ 
-	//โดยห้ามแก้ไข Code ในส่วนอื่น ๆ
-
-    source.close();
+	dest << "-------------------- BOOM ---------------------"<<endl;
+    dest << source.rdbuf();
+    dest << "-------------------- HA!! ---------------------";
+    
+	source.close();
     dest.close();
 	return 0;
 }
